@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Lexend+Deca:wght@300;400;500&display=swap');
+
+:root {
+    --dark-violet: #1B1938;
+    --blue: #0A0C19;
+    --violet: #AA5CDB;
+    --white: #ffffff;
+    --off-white: #e9e8e8;
+    --primary-font: font-family: 'Inter', sans-serif;
+    --secondary-font: font-family: 'Lexend Deca', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* .body {
+    font-family: var(--primary-font)
+} */
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--blue)
+}
+
+.card {
+    height: 60vh;
+    width: 70%;
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card-text {
+    height: 100%;
+    width: 50%;
+    background-color: var(--dark-violet);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.text-title {
+    font-family: var(--primary-font);
+    height: 50%;
+}
+
+.text-title h1 {
+    font-family: var(--primary-font);
+    font-weight: 700;
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.text-title h1 span {
+    color: #AA5CDB;
+}
+
+.text-titel p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.text-stats {
+    display: flex;
+    /* justify-content: space-around; */
+    column-gap: 32px;
+    /* align-items: flex-end; */
+    /* height: 50%; */
+}
+
+.card-image {
+    height: 100%;
+    width: 50%;
+    background-color: rgb(65, 107, 243);
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+}
+
+/* for laptop */
+@media only screen and (max-width: 1100px) and (min-width:801px) {
+    .card-text {
+        width: 70%;
+    }
+
+    .card-image {
+        width: 30%;
+    }
+}
+
+@media only screen and (max-width: 800px) and (min-width:501px) {
+    .card {
+        height: 90vh;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .card-text {
+        width: 100%;
+    }
+
+    .card-image {
+        width: 100%;
+    }
+
+    .text-stats {
+        font-size: 12px;
+    }
+
+    .card-text {
+        padding: 25px;
+    }
+}
+
+@media only screen and (max-width:500px) {
+    .card {
+        height: 70vh;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .card-text {
+        width: 100%;
+        height: 70%;
+    }
+
+    .card-image {
+        width: 100%;
+        height: 30%;
+    }
+
+    .text-stats {
+        font-size: 8px;
+    }
+
+    .card-text {
+        padding: 15px;
+    }
+}
